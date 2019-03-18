@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": ";AAAA;6CAC6C;AAE7C,0BAA0B;AAG1B,sBAAsB;AAEtB,8BAA8B;AAE9B,uBAAuB;AAMvB,4BAA4B;AIhB5B,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CAAG;;AAE7B,AAAA,CAAC,CAAC;EACE,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,IAAI;CAAG;;AAElB,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,IAAI;CAAG;;AJUnB,6BAA6B;AKnB7B,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CAOY;;AAN9B,AAAD,aAAO,CAAC;EACJ,UAAU,EAAE,IAAI;CAAG;;AACtB,AAAD,aAAO,CAAC;EACJ,OAAO,EAAE,YAAY;CAAG;;AAC3B,AAAD,iBAAW,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAAG;;ALYjC,2BAA2B;AMtB3B,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI,CAAC,8BAA8B;CAAG",
+    "sources": [
+        "../sass/style.sass",
+        "../sass/_colors.sass",
+        "../sass/_media.sass",
+        "../sass/_fonts.sass",
+        "../sass/_interface.sass",
+        "../sass/blocks/_navbar.sass",
+        "../sass/blocks/_main.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}

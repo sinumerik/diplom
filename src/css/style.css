@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* ПОДКЛЮЧАЙ СНАЧАЛА ВСЕ ФАЙЛЫ ДЛЯ СТИЛИЗАЦИИ
+    ЗАТЕМ INTERFACE, ЗАТЕМ СЕКЦИИ САЙТА!!! */
+/* подключаем normalize */
+/* подключаем цвета */
+/* подключаем медиа-запросы */
+/* подключаем шрифты */
+/* подключаем общие стили */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  width: 1171px;
+  margin: auto;
+}
+
+/* подключаем стили navbar */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__menu {
+  list-style: none;
+}
+
+.navbar__item {
+  display: inline-block;
+}
+
+.navbar__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* стили главного экрана */
+.main {
+  width: 500px;
+  height: 500px;
+  background: #000 url("../img/main/main-bg.png");
+}
+/*# sourceMappingURL=style.css.map */
