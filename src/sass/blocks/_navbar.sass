@@ -1,11 +1,27 @@
 .navbar
+    height: 55px
     display: flex
     justify-content: space-between
     align-items: center
     &__menu
         list-style: none
+        padding-left: 0
     &__item
         display: inline-block
+        margin-right: 33px
+        font-size: 14px
+        text-decoration: underline
+        +reg
     &__contacts
+        text-align: right
         display: flex
         flex-direction: column
+        margin-right: 5px
+    &__phone
+        font-size: 17px
+        +bold
+    &__feedback
+        color: $main-color
+        font-size: 14px
+        +reg
+        text-decoration: underline

@@ -5,10 +5,33 @@
 /* подключаем цвета */
 /* подключаем медиа-запросы */
 /* подключаем шрифты */
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* подключаем общие стили */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -23,6 +46,7 @@ a {
 
 /* подключаем стили navbar */
 .navbar {
+  height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,13 +60,20 @@ a {
 
 .navbar__menu {
   list-style: none;
+  padding-left: 0;
 }
 
 .navbar__item {
   display: inline-block;
+  margin-right: 33px;
+  font-size: 14px;
+  text-decoration: underline;
+  font-family: 'Proxima Nova Rg', sans-serif;
+  font-weight: 300;
 }
 
 .navbar__contacts {
+  text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +81,21 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-right: 5px;
+}
+
+.navbar__phone {
+  font-size: 17px;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+}
+
+.navbar__feedback {
+  color: #22bac1;
+  font-size: 14px;
+  font-family: 'Proxima Nova Rg', sans-serif;
+  font-weight: 300;
+  text-decoration: underline;
 }
 
 /* стили главного экрана */
