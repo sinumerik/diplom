@@ -22,3 +22,66 @@
         font-size: 20px
         margin-top: 62px
         text-align: center
+.slider
+    position: relative
+    &__item
+        display: flex
+        justify-content: space-around
+        margin-top: 97px
+    &__image
+        margin-left: 90px
+    &__text
+        +reg
+        margin-right: 96px
+    &__title
+        font-size: 24px
+        margin-top: -3px
+    &__des
+        display: block
+        font-size: 12px
+        margin-top: 47px
+    &__description
+        margin-top: 10px
+    &__button
+        width: 216px
+        background-color: #23bac1
+        padding-top: 23px
+        padding-bottom: 21px
+        font-size: 13px
+        text-transform: uppercase
+        +semi
+        color: #fff
+        letter-spacing: 0.38px
+        outline: none
+        border: none
+        margin-top: 62px
+        margin-left: -2px
+.composition
+    display: flex
+    margin-top: 55px
+    &__scale,
+    &__size,
+    &__date
+        display: flex
+        flex-direction: column
+        &-name
+            font-size: 12px
+            margin-bottom: 10px
+        &-value
+            font-size: 16px
+    &__scale
+        margin-right: 88px
+    &__size
+        margin-right: 73px
+.name,
+.value
+    display: inline-block
+.arrows
+    &__left
+        position: absolute
+        top: 157px
+        left: 0
+    &__right
+        position: absolute
+        top: 157px
+        right: 4px

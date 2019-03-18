@@ -469,4 +469,108 @@ h1, h2, h3, h4, h5 {
   margin-top: 62px;
   text-align: center;
 }
+
+.slider {
+  position: relative;
+}
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 97px;
+}
+
+.slider__image {
+  margin-left: 90px;
+}
+
+.slider__text {
+  font-family: 'Proxima Nova Rg', sans-serif;
+  margin-right: 96px;
+}
+
+.slider__title {
+  font-size: 24px;
+  margin-top: -3px;
+}
+
+.slider__des {
+  display: block;
+  font-size: 12px;
+  margin-top: 47px;
+}
+
+.slider__description {
+  margin-top: 10px;
+}
+
+.slider__button {
+  width: 216px;
+  background-color: #23bac1;
+  padding-top: 23px;
+  padding-bottom: 21px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova SemiBold', sans-serif;
+  color: #fff;
+  letter-spacing: 0.38px;
+  outline: none;
+  border: none;
+  margin-top: 62px;
+  margin-left: -2px;
+}
+
+.composition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 55px;
+}
+
+.composition__scale, .composition__size, .composition__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.composition__scale-name, .composition__size-name, .composition__date-name {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.composition__scale-value, .composition__size-value, .composition__date-value {
+  font-size: 16px;
+}
+
+.composition__scale {
+  margin-right: 88px;
+}
+
+.composition__size {
+  margin-right: 73px;
+}
+
+.name,
+.value {
+  display: inline-block;
+}
+
+.arrows__left {
+  position: absolute;
+  top: 157px;
+  left: 0;
+}
+
+.arrows__right {
+  position: absolute;
+  top: 157px;
+  right: 4px;
+}
 /*# sourceMappingURL=style.css.map */
