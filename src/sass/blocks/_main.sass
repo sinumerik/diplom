@@ -1,4 +1,103 @@
 .main
-    width: 500px
-    height: 500px
     background: #000 url('../img/main/main-bg.png')
+    &-block
+        display: flex
+        justify-content: space-between
+        padding-bottom: 81px
+    &__text
+        color: #fff
+        +reg
+        margin-left: -3px
+        font-weight: normal
+    &__title
+        width: 510px
+        font-size: 48px
+        line-height: 60px
+        margin-top: 113px
+    &__subtitle
+        display: block
+        font-size: 20px
+        margin-bottom: 59px
+    &__list
+        list-style: none
+    &__item
+        position: relative
+        margin-left: 21px
+        margin-bottom: 20px
+        line-height: 18px
+        font-size: 15px
+        width: 150px
+        letter-spacing: 0.1pt
+        &:before
+            content: '5'
+            position: absolute
+            left: -59px
+            top: 0
+            display: inline-block
+            width: 33px
+            height: 33px
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            border-radius: 50%
+            line-height: 35px
+            text-align: center
+        &:nth-child(2)
+            &:before
+                content: '24'
+                line-height: 35px
+                text-align: center
+        &:nth-child(3)
+            width: 215px
+            margin-bottom: 23px
+            &:before
+                content: ''
+                background: url('../img/main/reload.png') no-repeat center center
+        &:nth-child(4)
+            width: 165px
+            &:before
+                content: ''
+                left: -61px
+                background: url('../img/main/map-location.png') no-repeat center center
+.main__form
+    background-color: #fff
+    width: 370px
+    margin-top: 126px
+    margin-bottom: 20px
+    margin-right: 4px
+    text-align: center
+    +reg
+    &-bolder
+        font-weight: bold
+    &-title
+        width: 235px
+        margin-left: auto
+        margin-right: auto
+        font-size: 18px
+        margin-top: 35px
+        margin-bottom: 25px
+.form
+    display: flex
+    flex-direction: column
+    width: 260px
+    margin-left: auto
+    margin-right: auto
+.input
+    +reg
+    font-size: 13px
+    text-align: center
+    padding-top: 15px
+    padding-bottom: 17px
+    border: 1px solid #e8e8e8
+    margin-bottom: 15px
+    &:nth-child(3)
+        margin-bottom: 21px
+.button
+    background-color: #23bac1
+    padding-top: 20px
+    padding-bottom: 20px
+    font-size: 15px
+    text-transform: uppercase
+    +semi
+    color: #fff
+    letter-spacing: 0.38px
+    outline: none
+    border: none

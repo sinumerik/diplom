@@ -6,12 +6,15 @@
     &__menu
         list-style: none
         padding-left: 0
+        &_tablet
+            display: none
     &__item
+        position: relative
         display: inline-block
         margin-right: 33px
         font-size: 14px
-        text-decoration: underline
         +reg
+        text-decoration: underline
     &__contacts
         text-align: right
         display: flex
@@ -25,3 +28,19 @@
         font-size: 14px
         +reg
         text-decoration: underline
+
+@media (max-width: 1200px)
+    .navbar
+        &__item
+            font-size: 12px
+            margin-right: 15px
+        &__phone
+            font-size: 15px
+        &__feedback
+            font-size: 12px
+@media (max-width: 992px)
+    .navbar
+        position: relative
+        &__menu
+        &__phone
+            display: none
