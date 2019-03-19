@@ -47,6 +47,7 @@
 html {
   padding: 0;
   margin: 0;
+  font-family: 'Proxima Nova Rg', sans-serif;
 }
 
 a {
@@ -148,7 +149,8 @@ h1, h2, h3, h4, h5 {
 
 /* стили главного экрана */
 .main {
-  background: #000 url("../img/main/main-bg.png");
+  background: #000 url("../img/main/main-bg.png") no-repeat top center;
+  background-size: contain;
 }
 
 .main-block {
@@ -256,6 +258,7 @@ h1, h2, h3, h4, h5 {
   font-size: 18px;
   margin-top: 35px;
   margin-bottom: 25px;
+  line-height: 21px;
 }
 
 .form {
@@ -354,23 +357,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 35px;
 }
 
-.layouts__item:nth-child(2) .layouts__button {
-  margin-top: 35px;
-}
-
-.layouts__item:nth-child(5) .layouts__item-title {
-  margin-left: 34px;
-  margin-top: 27px;
-}
-
-.layouts__item:nth-child(5) .layouts__button {
-  margin-top: 35px;
-}
-
-.layouts__item:nth-child(6) .layouts__button {
-  margin-top: 154px;
-}
-
 .layouts__item:nth-child(3n) {
   margin-right: 0;
 }
@@ -395,6 +381,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .layouts__list {
+  height: 245px;
   list-style: none;
   padding-left: 0;
   margin-top: 30px;
@@ -402,6 +389,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .layouts__list-item {
+  width: 245px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   margin-bottom: 15px;
 }
@@ -410,10 +400,14 @@ h1, h2, h3, h4, h5 {
   content: '';
   position: absolute;
   bottom: -9px;
-  left: 176px;
+  left: 118px;
   width: 9px;
   height: 2px;
   background-color: #22bac1;
+}
+
+.layouts__list-item:last-child {
+  line-height: 21px;
 }
 
 .layouts__list-item:last-child:after {
@@ -442,6 +436,7 @@ h1, h2, h3, h4, h5 {
   background-color: #f6f6f6;
   font-family: 'Proxima Nova Rg', sans-serif;
   padding-top: 56px;
+  padding-bottom: 95px;
 }
 
 .projects__title {
@@ -573,4 +568,66 @@ h1, h2, h3, h4, h5 {
   top: 157px;
   right: 4px;
 }
+
+/* подключаем стили targets */
+.targets {
+  background: #010304 url("../img/targets/targets-bg.png") no-repeat top center;
+  background-size: contain;
+  color: #fff;
+  font-family: 'Proxima Nova Rg', sans-serif;
+  padding-top: 101px;
+  padding-bottom: 39px;
+}
+
+.targets__title {
+  width: 675px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 95px;
+  font-size: 24px;
+  margin-top: 0;
+  line-height: 31px;
+}
+
+.targets-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.targets__item {
+  width: 255px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 70px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.targets__image {
+  height: 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.targets__text {
+  display: block;
+  margin-top: 34px;
+  line-height: 20px;
+}
+
+/* подключаем стили company */
 /*# sourceMappingURL=style.css.map */
