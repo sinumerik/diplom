@@ -16,7 +16,15 @@ $(document).ready(function(){
     //     $('.section-navbar').css('display', 'none')
     // });
 
+// подключаем слайдер slick
+$('.projects__slider').slick({
+    prevArrow: $('.arrows__left'),
+    nextArrow: $('.arrows__right'),
+    fade: true
+}); 
 
+
+// подключаем слайдер OWL
     $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 32.2,
@@ -45,6 +53,8 @@ $(document).ready(function(){
     $('.company__right-arrow').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
     });
+
+    new WOW().init();
 
 });
 
