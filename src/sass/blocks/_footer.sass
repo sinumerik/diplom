@@ -1,0 +1,41 @@
+.footer
+    background-color: #191919
+    padding-top: 56px
+    padding-bottom: 52px
+    &-map
+        height: 418px
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: #fff
+    &__adress
+        position: relative
+        margin-left: 33px
+        &:before
+            content: ''
+            position: absolute
+            left: -33px
+            top: 8px
+            width: 14px
+            height: 18px
+            background: url('../img/footer/placeholder.png') no-repeat center center
+    &__text
+        display: block
+        font-size: 13px
+    &__call
+        text-align: right
+        margin-right: 7px
+    &__phone
+        display: block
+        color: #fff
+        font-size: 17px
+        margin-bottom: -3px
+        margin-top: -8px
+        +bold
+    &__feedback
+        display: block
+        color: $main-color
+        font-size: 13px
+        text-decoration: underline
+        margin-top: 10px
