@@ -12,6 +12,10 @@ $(document).ready(function(){
         }
     });
 
+    // $(window).scrollTop(function() {
+    //     $('.section-navbar').css('display', 'none')
+    // });
+
 
     $(".owl-carousel").owlCarousel({
         loop: true,

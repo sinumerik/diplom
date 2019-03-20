@@ -1,19 +1,22 @@
 
 .section-navbar
-    background-color: #fff
-    opacity: 0.9    
+    background-color: #fff  
     box-shadow: 0 21px 21px rgba(0, 0, 0, 0.28)
     width: 100%
     position: fixed
     top: 0
+    z-index: 5
 .navbar
     height: 55px
     display: flex
     justify-content: space-between
     align-items: center
+    margin-bottom: 7px
     &__menu
         list-style: none
         padding-left: 0
+        margin-top: 27px
+        margin-left: -2px
         &_tablet
             display: none
     &__item
@@ -23,14 +26,34 @@
         font-size: 14px
         +reg
         text-decoration: underline
+        &:hover
+            background-color: lightgray
     &__contacts
         text-align: right
         display: flex
         flex-direction: column
         margin-right: 5px
+        margin-top: 10px
     &__phone
         font-size: 17px
         +bold
+        position: relative
+        &:after
+            content: ''
+            bottom: 0
+            right: 0
+            width: 0
+            transition: 0.5s
+        &:hover
+            &:after
+                content: ''
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 74%
+                height: 2px
+                background-color: #000
+                transition: 0.5s
     &__feedback
         color: $main-color
         font-size: 14px
