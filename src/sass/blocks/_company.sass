@@ -31,9 +31,36 @@
     display: block
     width: auto !important
 .owl-item
-    width: 170px !important
+    width: auto !important
 .slick-initialized .slick-slide
     outline: none
+
+@media (max-width: 1200px)
+    .company
+        padding-top: 45px
+        padding-bottom: 80px
+        &__title
+            font-size: 22px
+            margin-bottom: 60px
+            margin-left: 0
+        &__image
+            width: 233px
+        &__left-arrow
+            top: -73px
+        &__right-arrow
+            top: -73px
+    .slider__wrapper
+        width: 765px
+        margin-left: auto
+@media (max-width: 992px)
+    .slider__wrapper
+        width: 700px
+@media (max-width: 768px)
+    .slider__wrapper
+        width: 500px
+@media (max-width: 576px) and (min-width: 320px)
+    .slider-wrapper
+        width: 250px
 
 
 

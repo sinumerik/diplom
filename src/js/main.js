@@ -88,14 +88,23 @@ $('.projects__slider').slick({
             0 : {
                 items: 1
             },
-            // breakpoint from 480 up
+            // breakpoint from 320 up
+            320: {
+                items: 1
+            },
+            // breakpoint from 576 up
+            576 : {
+                items: 2
+            },
+            // breakpoint from 768 up
             768 : {
                 items: 3
             },
+            // breakpoint from 992 up
             992 : {
                 items: 3
             },
-            // breakpoint from 768 up
+            // breakpoint from 1200 up
             1200 : {
                 items: 5
             }

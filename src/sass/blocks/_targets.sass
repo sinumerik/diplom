@@ -28,9 +28,22 @@
     &__image
         height: 51px
         display: flex
-        align-items: center
+        align-items: flex-end
         justify-content: center
     &__text 
         display: block
         margin-top: 34px
         line-height: 20px
+
+@media (max-width: 1200px)
+    .targets
+        padding-top: 55px
+        &__title
+            width: 615px
+            font-size: 22px
+        &__item
+            margin-left: 50px
+            margin-right: 50px
+            margin-bottom: 50px
+            font-size: 14px
+            flex-basis: 38%

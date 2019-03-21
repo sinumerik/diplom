@@ -96,7 +96,7 @@
         border: 1px solid darken($main-color, 10%)
         text-align: left
         padding-left: 25px
-.main__button
+.button
     background-color: #23bac1
     padding-top: 20px
     padding-bottom: 20px
@@ -109,24 +109,45 @@
     border: none
 .main__email
     margin-bottom: 21px
+
+
 @media (max-width: 1200px)
     .main
+        &-block
+            padding-bottom: 65px
+        &__text
+            margin-left: 0
         &__title
-            width: 470px
-            font-size: 36px
+            width: 410px
+            font-size: 38px
             line-height: 40px
-            margin-top: 90px
-        &__item
-            font-size: 14px
+            margin-top: 80px
         &__subtitle
             font-size: 18px
             margin-bottom: 40px
-        &__form
-            margin-top: 90px
-            margin-right: 0
-            width: 320px
-            &-title
-                font-size: 16px
-        &__button
-            margin-bottom: 30px
+        &__item
             font-size: 14px
+            line-height: normal
+        &__form
+            width: 340px
+            margin-bottom: 0
+            margin-top: 80px
+            margin-right: 0
+            &__title
+                font-size: 18px
+                line-height: normal
+    .form
+        width: 230px
+    .button
+        padding-top: 14px
+        padding-bottom: 14px
+        font-size: 13px
+    .input
+        padding-top: 12px
+        padding-bottom: 12px
+@media (max-width: 992px)
+    .main
+@media (max-width: 768px)
+    .main
+@media (max-width: 576px) and (min-width: 320px)
+    .main
