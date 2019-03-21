@@ -38,12 +38,15 @@
             .layouts__button
                 background-color: $main-color
                 transition: 0.5s
+                -ms-transition: 0.5s
                 &:hover
                     background-color: lighten($main-color, 10%)
                     transition: 0.5s
+                    -ms-transition: 0.5s
             .layouts__image
                 filter: none
                 transition: 0.5s
+                -ms-transition: 0.5s
         &:nth-child(3n)
             margin-right: 0
         &:nth-child(5)
@@ -116,6 +119,8 @@
             width: 220px
             font-size: 32px
             margin-top: 70px
+            &:after
+                left: 87px
         &__subtitle
             font-size: 18px
             margin-top: 40px
@@ -132,7 +137,7 @@
             &:nth-child(5)
                 .layouts__item-title
                     padding-left: 0
-            &__title
+            &-title
                 font-size: 18px
         &__list
             height: 225px
@@ -146,6 +151,18 @@
             font-size: 12px
 @media (max-width: 992px)
     .layouts
+        &__title
+            font-size: 28px
+            margin-top: 40px
+            &:after
+                left: 73px
+        &__subtitle
+            font-size: 17px
+            margin-bottom: 0
+        &__item
+            &-title
+                font-size: 18px
+                margin-bottom: 13px
 @media (max-width: 768px)
     .layouts
 @media (max-width: 576px) and (min-width: 320px)

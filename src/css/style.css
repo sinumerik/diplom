@@ -259,6 +259,7 @@
           animation-name: fadeInUp;
 }
 
+/* выпадающие меню */
 /* подключаем стили модального окна */
 .modal {
   position: fixed;
@@ -396,6 +397,10 @@ input.invalid {
   right: 5px;
 }
 
+.navbar__menu-mobile {
+  dislpay: inline-block;
+}
+
 /* подключаем стили navbar */
 .section-navbar {
   background-color: #fff;
@@ -426,10 +431,6 @@ input.invalid {
   padding-left: 0;
   margin-top: 27px;
   margin-left: -2px;
-}
-
-.navbar__menu_tablet {
-  display: none;
 }
 
 .navbar__item {
@@ -502,6 +503,12 @@ input.invalid {
 }
 
 @media (max-width: 992px) {
+  .navbar {
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
   .navbar {
     position: relative;
   }
@@ -717,6 +724,28 @@ input.invalid {
   }
 }
 
+@media (max-width: 992px) {
+  .main__title {
+    width: 385px;
+    font-size: 28px;
+  }
+  .main__subtitle {
+    font-size: 17px;
+  }
+  .main__item {
+    font-size: 13px;
+  }
+  .main__form {
+    width: 300px;
+  }
+  .main__form__title {
+    font-size: 17px;
+  }
+  .button {
+    font-size: 12px;
+  }
+}
+
 /* подключаем стили layouts */
 .layouts {
   font-family: 'Proxima Nova Rg', sans-serif;
@@ -782,12 +811,14 @@ input.invalid {
   background-color: #22bac1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -ms-transition: 0.5s;
 }
 
 .layouts__item:hover .layouts__button:hover {
   background-color: #3ad5dc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -ms-transition: 0.5s;
 }
 
 .layouts__item:hover .layouts__image {
@@ -795,6 +826,7 @@ input.invalid {
           filter: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -ms-transition: 0.5s;
 }
 
 .layouts__item:nth-child(3n) {
@@ -893,6 +925,9 @@ input.invalid {
     font-size: 32px;
     margin-top: 70px;
   }
+  .layouts__title:after {
+    left: 87px;
+  }
   .layouts__subtitle {
     font-size: 18px;
     margin-top: 40px;
@@ -914,7 +949,7 @@ input.invalid {
   .layouts__item:nth-child(5) .layouts__item-title {
     padding-left: 0;
   }
-  .layouts__item__title {
+  .layouts__item-title {
     font-size: 18px;
   }
   .layouts__list {
@@ -929,6 +964,24 @@ input.invalid {
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .layouts__title {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+  .layouts__title:after {
+    left: 73px;
+  }
+  .layouts__subtitle {
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+  .layouts__item-title {
+    font-size: 18px;
+    margin-bottom: 13px;
   }
 }
 
@@ -1149,6 +1202,62 @@ input.invalid {
   }
 }
 
+@media (max-width: 992px) {
+  .projects__title {
+    font-size: 28px;
+  }
+  .projects__title:after {
+    bottom: -10px;
+  }
+  .projects__subtitle {
+    font-size: 17px;
+    margin-top: 24px;
+  }
+  .slider__title {
+    font-size: 20px;
+  }
+  .slider__des {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .slider__description {
+    width: 230px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .slider__image {
+    width: 230px;
+  }
+  .slider__button {
+    width: 170px;
+    font-size: 11px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 20px;
+  }
+  .name {
+    font-size: 11px;
+  }
+  .value {
+    font-size: 12px;
+  }
+  .composition {
+    margin-top: 12px;
+  }
+  .composition__size {
+    margin-right: 40px;
+  }
+  .composition__scale {
+    margin-right: 40px;
+  }
+  .arrows__left {
+    top: 160px;
+  }
+  .arrows__right {
+    top: 160px;
+  }
+}
+
 /* подключаем стили targets */
 .targets {
   background: #010304 url("../img/targets/targets-bg.png") no-repeat top center;
@@ -1224,6 +1333,20 @@ input.invalid {
     font-size: 14px;
     -ms-flex-preferred-size: 38%;
         flex-basis: 38%;
+  }
+}
+
+@media (max-width: 992px) {
+  .targets__title {
+    width: 480px;
+    font-size: 20px;
+  }
+  .targets__item {
+    width: 220px;
+    -ms-flex-preferred-size: 31%;
+        flex-basis: 31%;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 }
 
@@ -1321,7 +1444,10 @@ input.invalid {
 
 @media (max-width: 992px) {
   .slider__wrapper {
-    width: 700px;
+    width: 630px;
+  }
+  .company__image {
+    width: 295px;
   }
 }
 
