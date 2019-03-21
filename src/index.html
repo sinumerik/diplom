@@ -13,28 +13,28 @@
             <nav class="navbar">
                 <ul class="navbar__menu">
                     <li class="navbar__item">
-                        <a href="" class="navbar__item_link">Главная</a>
+                        <a href="#main" class="navbar__item_link">Главная</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="">Виды макетов</a>
+                        <a href="#layouts">Виды макетов</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="">Комплектация макетов</a>
+                        <a href="#layouts">Комплектация макетов</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="">Реализованные проекты</a>
+                        <a href="#projects">Реализованные проекты</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="">Наши клиенты</a>
+                        <a href="#company">Наши клиенты</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="">Контакты</a>
+                        <a href="#footer">Контакты</a>
                     </li>
                 </ul>
                 <!-- /.navbar__menu -->
                 <div class="navbar__contacts">
                     <a href="tel:+8(800)891-33-33" class="navbar__phone">8 800 891-33-33</a>
-                    <a href="" class="navbar__feedback">Заказать обратный звонок</a>
+                    <a href="" class="navbar__feedback feedback">Заказать обратный звонок</a>
                 </div>
                 <!-- /.navbar__contacts -->
             </nav>
@@ -44,7 +44,7 @@
     </div>
     <!-- /.section section-navbar -->
 
-    <div class="section main">
+    <div class="section main" id="main">
         <div class="container">
             <div class="main-block">
                 <div class="main__text">
@@ -78,11 +78,11 @@
                         Оставьте заявку и получите расчет стоимость макета <br>в течение <span class="main__form-bolder">30 минут</span>
                     </h2>
                     <!-- /.form__title -->
-                    <form action="" class="form">
-                        <input type="text" class="input" placeholder="Ваше имя">
-                        <input type="tel" class="input" placeholder="Контактный телефон">
-                        <input type="email" class="input" placeholder="Электронная почта">
-                        <button class="button">Оставить заявку</button>
+                    <form action="php/mail.php" method="POST" class="form" id="form">
+                        <input type="text" name="username" class="input main__name" placeholder="Ваше имя">
+                        <input type="tel" name="userPhone" class="input main__phone" placeholder="Контактный телефон">
+                        <input type="email" name="userEmail" class="input main__email" placeholder="Электронная почта">
+                        <button type="submit" class="main__button btn" form="form">Оставить заявку</button>
                     </form>
                     <!-- /.form -->
                 </div>
@@ -94,7 +94,7 @@
     </div>
     <!-- /.section main -->
 
-    <div class="container">
+    <div class="container" id="layouts">
         <div class="layouts">
             <h2 class="layouts__title">
                 Виды макетов
@@ -144,7 +144,7 @@
                         <!-- /.layouts__list-item -->
                     </ul>
                     <!-- /.layouts__list -->
-                    <button class="layouts__button">
+                    <button class="layouts__button btn">
                         Рассчитать стоимость
                     </button> <!-- /.layouts__button -->
                 </div>
@@ -184,7 +184,7 @@
                         <!-- /.layouts__list-item -->
                     </ul>
                     <!-- /.layouts__list -->
-                    <button class="layouts__button">
+                    <button class="layouts__button btn">
                         Рассчитать стоимость
                     </button> <!-- /.layouts__button -->
                 </div>
@@ -272,7 +272,7 @@
                         <!-- /.layouts__list-item -->
                     </ul>
                     <!-- /.layouts__list -->
-                    <button class="layouts__button">
+                    <button class="layouts__button btn">
                         Рассчитать стоимость
                     </button> <!-- /.layouts__button -->
                 </div>
@@ -312,7 +312,7 @@
                         <!-- /.layouts__list-item -->
                     </ul>
                     <!-- /.layouts__list -->
-                    <button class="layouts__button">
+                    <button class="layouts__button btn">
                         Рассчитать стоимость
                     </button> <!-- /.layouts__button -->
                 </div>
@@ -330,7 +330,7 @@
                             Мы может воплотить в жизнь любые идеи, с применением высоких технологий, максимальной детализацией<br> и совершенно любых размеров
                         </li>
                     </ul>
-                    <button class="layouts__button">
+                    <button class="layouts__button btn">
                         Рассчитать стоимость
                     </button> <!-- /.layouts__button -->
                 </div>
@@ -342,7 +342,7 @@
     </div>
     <!-- /.container -->
 
-    <div class="section projects">
+    <div class="section projects" id="projects">
         <div class="container">
             <h2 class="projects__title">
                 Реализованные проекты
@@ -401,7 +401,7 @@
                                 <!-- /.composition__date -->
                             </div>
                             <!-- /.slider__composition -->
-                            <button class="slider__button">
+                            <button class="slider__button btn">
                                 Заказать макет
                             </button> <!-- /.slider__button -->
                         </div>
@@ -455,7 +455,7 @@
                                 <!-- /.composition__date -->
                             </div>
                             <!-- /.slider__composition -->
-                            <button class="slider__button">
+                            <button class="slider__button btn">
                                 Заказать макет
                             </button> <!-- /.slider__button -->
                         </div>
@@ -479,7 +479,7 @@
     </div>
     <!-- /.section projects -->
 
-    <section class="targets">
+    <section class="targets" id="targets">
         <div class="container">
             <h2 class="targets__title">
                 Все макеты, изготовленные нашей макетной мастерской, помогли клиентам выполнить поставленные цели, а именно:
@@ -557,7 +557,7 @@
     </section>
     <!-- /.targets -->
 
-    <section class="company">
+    <section class="company" id="company">
         <div class="container">
             <h2 class="company__title">
                 Наши клиенты
@@ -598,20 +598,24 @@
     </section>
     <!-- /.company -->
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-map map" id="map"></div>
         <div class="container">
             <div class="footer-block">
                 <div class="footer__adress">
-                    <span class="footer__text">
-                        г. Москва, 
-                    </span>
-                    <span class="footer__text">Автомоторная улица, 4А, стр.21</span>
+                    <a href="https://yandex.ru/maps/?um=constructor%3A9f5c91b84eb6c3ff696b5b9913842fee6b26918a6edb60f932c440bf38ae371f&source=constructorLink" target="_blank" class="footer__txt">
+                        <span class="footer__text">
+                            г. Москва, 
+                        </span>
+                        <span class="footer__text">
+                            Автомоторная улица, 4А, стр.21
+                        </span>
+                    </a>
                 </div>
                 <!-- /.footer__adress -->
                 <div class="footer__call">
                     <a href="tel:8(800)891-33-33" class="footer__phone">8 800 891-33-33</a>
-                    <span class="footer__feedback">Заказать обратный звонок</span>
+                    <a href="" class="footer__feedback feedback">Заказать обратный звонок</a>
                 </div>
                 <!-- /.footer__call -->
             </div>
@@ -621,12 +625,28 @@
     </footer>
     <!-- /.footer -->
 
+<div class="modal" id="modal"> 
+    <div class="modal-dialog">
+        <button class="modal-dialog__close" id="close">
+            &times;
+        </button> <!-- /.modal-dialog__close -->
+        <h3>
+            My first script!!!<br>
+            And it's close at 5 seconds!!!
+        </h3>
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 
 </body>
 </html>

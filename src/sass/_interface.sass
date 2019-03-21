@@ -19,3 +19,27 @@ h1, h2, h3, h4, h5
     font-weight: normal
 input
     outline: none
+    &.invalid
+        border: 1px solid red
+.btn
+    &:hover
+        cursor: pointer
+        background-color: lighten($main-color, 10%)
+.feedback
+    &:hover
+        color: lighten($main-color, 10%)
+.invalid
+    color: red
+    font-size: 12px
+#username-error
+    position: absolute
+    top: -14px
+    right: 5px
+#userPhone-error
+    position: absolute
+    top: 51px
+    right: 5px
+#userEmail-error
+    position: absolute
+    top: 116px
+    right: 5px

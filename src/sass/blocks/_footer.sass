@@ -20,6 +20,8 @@
             width: 14px
             height: 18px
             background: url('../img/footer/placeholder.png') no-repeat center center
+    &__txt
+        color: #fff
     &__text
         display: block
         font-size: 13px
@@ -27,12 +29,29 @@
         text-align: right
         margin-right: 7px
     &__phone
+        position: relative
         display: block
         color: #fff
         font-size: 17px
         margin-bottom: -3px
         margin-top: -8px
         +bold
+        &:after
+            content: ''
+            bottom: 0
+            right: 0
+            width: 0
+            transition: 0.5s
+        &:hover
+            &:after
+                content: ''
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 80%
+                height: 2px
+                background-color: #fff
+                transition: 0.5s
     &__feedback
         display: block
         color: $main-color

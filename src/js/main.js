@@ -12,6 +12,61 @@ $(document).ready(function(){
         }
     });
 
+    // 
+    var close = $('#close');
+    var modal = $('#modal');
+
+    // плавная прокрутка до якоря
+    $("body").on('click', '[href*="#"]', function(e){
+        var fixed_offset = 60;
+        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+        e.preventDefault();
+      });
+    
+    // обработка формы Ajax
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "../php/mail.php",
+            type: 'POST',
+            success: function() {
+                modal.addClass('modal_active');
+            }
+        });
+    });
+    
+    //маска для номера телефона
+    $('.main__phone').mask("+7 (999) 999-99-99");
+    // валидация формы
+    $('#form').validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 2
+            },
+            userPhone: {
+                required: true
+            },
+            userEmail: {
+                required: true
+            }
+        },
+        errorClass: "invalid",
+        errorElement: "div",
+        messages: {
+            username: {
+                required: "Укажите имя",
+                minlength: jQuery.validator.format("Нужно еще {0} символа(-ов)"),
+                maxlength: jQuery.validator.format("Максимальное количество символов {0}")
+            },
+            userPhone: "Укажите телефон",
+            userEmail: {
+                required: "Укажите email",
+                email: "Введите корректный email"
+            }
+        }
+    });
+
     // $(window).scrollTop(function() {
     //     $('.section-navbar').css('display', 'none')
     // });
@@ -37,13 +92,16 @@ $('.projects__slider').slick({
             768 : {
                 items: 3
             },
+            992 : {
+                items: 3
+            },
             // breakpoint from 768 up
             1200 : {
                 items: 5
             }
         }
     });
-
+    // вешаем прокрутку слайдера на наши кнопки
     var owl = $('.owl-carousel');
 
     owl.owlCarousel();
@@ -54,6 +112,7 @@ $('.projects__slider').slick({
         owl.trigger('prev.owl.carousel', [300]);
     });
 
+    // инициализация анимации
     new WOW().init();
 
 });
