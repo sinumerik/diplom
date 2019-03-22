@@ -11,7 +11,7 @@
             content: ''
             position: absolute
             bottom: -21px
-            left: 100px
+            left: 48%
             width: 31px
             height: 2px
             background-color: $main-color
@@ -119,8 +119,6 @@
             width: 220px
             font-size: 32px
             margin-top: 70px
-            &:after
-                left: 87px
         &__subtitle
             font-size: 18px
             margin-top: 40px
@@ -154,8 +152,6 @@
         &__title
             font-size: 28px
             margin-top: 40px
-            &:after
-                left: 73px
         &__subtitle
             font-size: 17px
             margin-bottom: 0
@@ -165,5 +161,15 @@
                 margin-bottom: 13px
 @media (max-width: 768px)
     .layouts
+        &__title
+            width: 100%
+            text-align: center
 @media (max-width: 576px) and (min-width: 320px)
     .layouts
+        &__subtitle
+            font-size: 16px
+        &__img
+            width: 255px
+            height: auto
+        &__image
+            height: auto
