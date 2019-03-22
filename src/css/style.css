@@ -259,7 +259,6 @@
           animation-name: fadeInUp;
 }
 
-/* выпадающие меню */
 /* подключаем стили модального окна */
 .modal {
   position: fixed;
@@ -365,9 +364,50 @@ input.invalid {
   border: 1px solid red;
 }
 
+.invalid {
+  color: red;
+  font-size: 12px;
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: #3ad5dc;
+}
+
+#username-error {
+  position: absolute;
+  top: 0;
+  right: 4px;
+}
+
+#userPhone-error {
+  position: absolute;
+  top: 65px;
+  right: 4px;
+}
+
+#userEmail-error {
+  position: absolute;
+  top: 130px;
+  right: 4px;
+}
+
+@media (max-width: 1200px) {
+  #username-error {
+    font-size: 11px;
+    top: 0;
+    right: 4px;
+  }
+  #userPhone-error {
+    font-size: 11px;
+    top: 57px;
+    right: 4px;
+  }
+  #userEmail-error {
+    font-size: 11px;
+    top: 114px;
+    right: 4px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -375,57 +415,37 @@ input.invalid {
     background-color: #22bac1;
   }
   .feedback:hover {
-    background-color: #22bac1;
+    color: #22bac1;
   }
-}
-
-.feedback:hover {
-  color: #3ad5dc;
-}
-
-.invalid {
-  color: red;
-  font-size: 12px;
-}
-
-#username-error {
-  position: absolute;
-  top: -14px;
-  right: 5px;
-}
-
-@media (max-width: 576px) and (min-width: 320px) {
   #username-error {
-    top: 0px;
+    top: -1px;
+    right: 5px;
   }
 }
 
-#userPhone-error {
-  position: absolute;
-  top: 51px;
-  right: 5px;
-}
-
-@media (max-width: 576px) and (min-width: 320px) {
-  #userPhone-error {
+@media (max-width: 768px) {
+  #userPhone {
     top: 57px;
   }
 }
 
-#userEmail-error {
-  position: absolute;
-  top: 116px;
-  right: 5px;
-}
-
 @media (max-width: 576px) and (min-width: 320px) {
-  #userEmail-error {
-    top: 115px;
+  #username-error {
+    font-size: 10px;
+    top: 0px;
   }
-}
-
-.navbar__menu-mobile {
-  dislpay: inline-block;
+  #userPhone-error {
+    font-size: 10px;
+    position: absolute;
+    top: 56px;
+    right: 5px;
+  }
+  #userEmail-error {
+    font-size: 10px;
+    position: absolute;
+    top: 114px;
+    right: 5px;
+  }
 }
 
 /* подключаем стили navbar */
@@ -440,7 +460,6 @@ input.invalid {
 }
 
 .navbar {
-  height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,7 +469,22 @@ input.invalid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 7px;
+  margin-left: -1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.navbar_active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.navbar__overlay {
+  display: inline-block;
 }
 
 .navbar-wrapper {
@@ -464,22 +498,51 @@ input.invalid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.navbar__menu {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 27px;
-  margin-left: -2px;
+  margin-top: 14px;
+  padding-bottom: 10px;
 }
 
 .navbar__item {
   position: relative;
   display: inline-block;
-  margin-right: 33px;
+  text-decoration: none;
+  margin-right: 34px;
+  font-family: 'Proxima Nova Bold', sans-serif;
   font-size: 14px;
-  font-family: 'Proxima Nova Rg', sans-serif;
-  text-decoration: underline;
+}
+
+.navbar__item:after {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.navbar-btn {
+  display: none;
+}
+
+.navbar-btn_disable .burger {
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar-btn_disable .burger:after {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navbar-btn_disable .burger:before {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .navbar__contacts {
@@ -492,7 +555,6 @@ input.invalid {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 5px;
-  margin-top: 10px;
 }
 
 .navbar__phone {
@@ -515,7 +577,7 @@ input.invalid {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 74%;
+  width: 76%;
   height: 2px;
   background-color: #000;
   -webkit-transition: 0.5s;
@@ -529,41 +591,13 @@ input.invalid {
   text-decoration: underline;
 }
 
-.hideMenu {
-  position: relative;
-  display: none;
-}
-
-.hideMenu__btn {
-  position: relative;
-  display: block;
-}
-
-.hideMenu__btn_active .burger {
-  background-color: transparent;
-}
-
-.hideMenu__btn_active .burger:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.hideMenu__btn_active .burger:before {
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
 .burger {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: inline-block;
   position: absolute;
-  top: 50%;
-  margin-top: -1px;
-  left: -20px;
-  margin-left: -10px;
+  top: 49%;
+  left: 0;
   width: 20px;
   height: 2px;
   background-color: #000;
@@ -579,6 +613,8 @@ input.invalid {
   background-color: #000;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .burger:before {
@@ -591,6 +627,8 @@ input.invalid {
   background-color: #000;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 1200px) {
@@ -612,32 +650,66 @@ input.invalid {
 
 @media (max-width: 992px) {
   .navbar {
-    display: none;
-    position: relative;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 120px;
+  }
+  .navbar_active {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .navbar__item {
+    display: block;
+    font-size: 16px;
+  }
+  .navbar__item:after {
+    width: 0;
+  }
+  .navbar-btn {
+    display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .navbar__overlay {
     margin-left: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navbar-wrapper {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .hideMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .menu-btn {
+    display: block;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    position: relative;
-  }
   .navbar__phone {
     display: none;
+  }
+}
+
+@media (max-width: 576px) and (min-width: 320px) {
+  .navbar {
+    left: 85px;
+    top: -15px;
+  }
+  .navbar__item {
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+    width: 235px;
+    height: 30px;
+    margin-right: 0;
+    background-color: black;
   }
 }
 
@@ -2130,15 +2202,18 @@ input.invalid {
   }
   .footer__adress:before {
     left: -20px;
+    top: 4px;
+    height: 16px;
+    background-size: auto 100%;
   }
   .footer__text {
-    font-size: 11px;
+    font-size: 10px;
   }
   .footer__phone {
-    font-size: 12px;
+    font-size: 11px;
   }
   .footer__feedback {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 /*# sourceMappingURL=style.css.map */

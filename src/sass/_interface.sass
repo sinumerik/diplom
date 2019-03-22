@@ -21,43 +21,64 @@ input
     outline: none
     &.invalid
         border: 1px solid red
+.invalid
+        color: red
+        font-size: 12px
 .btn
     &:hover
         cursor: pointer
         background-color: lighten($main-color, 10%)
+#username-error
+    position: absolute
+    top: 0
+    right: 4px
+#userPhone-error
+    position: absolute
+    top: 65px
+    right: 4px
+#userEmail-error
+    position: absolute
+    top: 130px
+    right: 4px
+@media (max-width: 1200px)
+    #username-error
+        font-size: 11px
+        top: 0
+        right: 4px
+    #userPhone-error
+        font-size: 11px
+        top: 57px
+        right: 4px
+    #userEmail-error
+        font-size: 11px
+        top: 114px
+        right: 4px
 @media (max-width: 992px)
     .btn
         &:hover
             background-color: $main-color
     .feedback
         &:hover
-            background-color: $main-color
-.feedback
-    &:hover
-        color: lighten($main-color, 10%)
-.invalid
-    color: red
-    font-size: 12px
-#username-error
-    position: absolute
-    top: -14px
-    right: 5px
+            color: $main-color
+    #username-error
+        top: -1px
+        right: 5px
+@media (max-width: 768px)
+    #userPhone
+        top: 57px
 @media (max-width: 576px) and (min-width: 320px)
     #username-error
+        font-size: 10px
         top: 0px
-#userPhone-error
-    position: absolute
-    top: 51px
-    right: 5px
-@media (max-width: 576px) and (min-width: 320px)
     #userPhone-error
-        top: 57px
-#userEmail-error
-    position: absolute
-    top: 116px
-    right: 5px
-@media (max-width: 576px) and (min-width: 320px)
+        font-size: 10px
+        position: absolute
+        top: 56px
+        right: 5px
     #userEmail-error
-        top: 115px
-.navbar__menu-mobile
-    dislpay: inline-block
+        font-size: 10px
+        position: absolute
+        top: 114px
+        right: 5px
+
+

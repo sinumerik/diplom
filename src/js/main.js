@@ -12,12 +12,20 @@ $(document).ready(function(){
         }
     });
     // 
-    $('.hideMenu__btn').on('click', function(e) {
+    $('.navbar-btn').on('click', function(e) {
         e.preventDefault();
-        $(this).toggleClass('hideMenu__btn_active');
+        $(this).toggleClass('navbar-btn_disable');
+        $('.navbar').toggleClass('navbar_active');
+        $('.navbar__item').on('click', function(){
+            $('.navbar').removeClass("navbar_active");
+            $('a').removeClass('navbar-btn_disable');
+        });
+        if($('.navbar__overlay').hasClass('navbar_active') & ($(window).width() <= '992')) {
+            $('.navbar').css("display", "block");
+        }
     });
 
-    // 
+    //             event.stopPropagation();
     var close = $('#close');
     var modal = $('#modal');
 
