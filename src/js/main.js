@@ -11,6 +11,11 @@ $(document).ready(function(){
             count++;
         }
     });
+    // 
+    $('.hideMenu__btn').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hideMenu__btn_active');
+    });
 
     // 
     var close = $('#close');

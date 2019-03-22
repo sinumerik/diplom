@@ -25,6 +25,13 @@ input
     &:hover
         cursor: pointer
         background-color: lighten($main-color, 10%)
+@media (max-width: 992px)
+    .btn
+        &:hover
+            background-color: $main-color
+    .feedback
+        &:hover
+            background-color: $main-color
 .feedback
     &:hover
         color: lighten($main-color, 10%)
@@ -35,13 +42,22 @@ input
     position: absolute
     top: -14px
     right: 5px
+@media (max-width: 576px) and (min-width: 320px)
+    #username-error
+        top: 0px
 #userPhone-error
     position: absolute
     top: 51px
     right: 5px
+@media (max-width: 576px) and (min-width: 320px)
+    #userPhone-error
+        top: 57px
 #userEmail-error
     position: absolute
     top: 116px
     right: 5px
+@media (max-width: 576px) and (min-width: 320px)
+    #userEmail-error
+        top: 115px
 .navbar__menu-mobile
     dislpay: inline-block

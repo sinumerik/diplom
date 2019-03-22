@@ -10,38 +10,48 @@
 <body>
     <div class="section section-navbar">
         <div class="container">
-            <nav class="navbar">
-                <!-- <input class="nav__check" type="checkbox" id="showmenu"/>
-                <label class="nav__showmenu" for="showmenu">&#9776;</label>
-                <label class="nav__back" for="showmenu"></label> -->
-                <ul class="navbar__menu-moblie navbar__menu">
-                    <li class="navbar__item">
-                        <a href="#main" class="menu__item">Главная</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#layouts" class="menu__item">Виды макетов</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#layouts" class="menu__item">Комплектация макетов</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#projects" class="menu__item">Реализованные проекты</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#company" class="menu__item">Наши клиенты</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#footer" class="menu__item">Контакты</a>
-                    </li>
-                </ul>
-                <!-- /.navbar__menu -->
+            <div class="navbar-wrapper">
+                <div class="navbar__overlay">
+                    <nav class="navbar">
+                        <ul class="navbar__menu">
+                            <li class="navbar__item">
+                                <a href="#main" class="menu__item">Главная</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#layouts" class="menu__item">Виды макетов</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#layouts" class="menu__item">Комплектация макетов</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#projects" class="menu__item">Реализованные проекты</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#company" class="menu__item">Наши клиенты</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#footer" class="menu__item">Контакты</a>
+                            </li>
+                        </ul>
+                        <!-- /.navbar__menu -->
+                    </nav>
+                    <!-- /.navbar -->
+                    <div class="hideMenu">
+                        <a href="#" class="hideMenu__btn">
+                            МЕНЮ
+                            <span class="burger"></span>
+                        </a>
+                    </div>
+                    <!-- /.hideMenu -->
+                </div>
+                <!-- /.navbar__overlay -->
                 <div class="navbar__contacts">
                     <a href="tel:+8(800)891-33-33" class="navbar__phone">8 800 891-33-33</a>
                     <a href="" class="navbar__feedback feedback">Заказать обратный звонок</a>
                 </div>
                 <!-- /.navbar__contacts -->
-            </nav>
-            <!-- /.navbar -->
+            </div>
+            <!-- /.navbar-wrapper -->
         </div>
         <!-- /.container -->
     </div>
